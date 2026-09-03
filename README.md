@@ -1,4 +1,4 @@
-# 🎬 AI Film Skills Suite (AI 短剧与电影工业级生产技能套件)
+# 🎬 AI Drama Suite (AI 短剧工业级生产工作流)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/Platform-Antigravity%20%7C%20Codex%20%7C%20Claude%20Code%20%7C%20Trae-blue)](#-快速安装)
@@ -26,6 +26,10 @@
    - 锁定剧本原始台词，建立不可变哈希台账；
    - 100% 逐字对应 `<d>[Language] ...</d>`，严禁 AI 擅自扩写、意译或删词；
    - 强制说话秒数内面部/口型可见，背身或画外必须声明 `[Off-Screen]`。
+
+5. **🎯 导演预演强制审批门（`Director Previs Approval Gate`）**：
+   - 编译六大模块机器提示词与调用算力前，强制交付【五列人读导演预演表】（时间、景别机位、动作因果、逐字台词、声音与尾帧）；
+   - **用户未明确确认“通过”前，严禁擅自生成机器提示词、严禁调用付费渲染**，杜绝无效烧算力。
 
 4. **⚡ 动作账本与刚体防回弹禁令（`action_ledger` & Anti-Bounce）**：
    - 动作拆解为 `起势 ➔ 位移 ➔ 接触/受力 ➔ 反应 ➔ 定格尾帧`；
@@ -82,10 +86,10 @@ flowchart TD
 
 ```bash
 # Codex / Antigravity / 通用 Agents
-git clone https://github.com/egguy886/ai-film-skills.git ~/.agents/skills/ai-film-skills
+git clone https://github.com/egguy886/ai-drama-suite.git ~/.agents/skills/ai-drama-suite
 
 # 或克隆到当前项目工作区
-git clone https://github.com/egguy886/ai-film-skills.git .agents/skills/
+git clone https://github.com/egguy886/ai-drama-suite.git .agents/skills/
 ```
 
 ### 方式二：使用内置安装器单模块安装
