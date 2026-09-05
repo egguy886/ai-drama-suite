@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Drama H3 Prompts"
+  short_description: "MiniMax H3 8x15s prompt compiler with Higgsfield protocols and rigidity controls"
+  default_prompt: "Use $drama-h3-prompts to compile 8x15s industrial prompts for MiniMax H3."
