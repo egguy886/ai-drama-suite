@@ -62,12 +62,20 @@
 {"contact_id":"CIS_E01S01_M01","initiator":"C02","target":"C01","contact_part":"boot_sole_to_dorsal_hand","prop_id":"P01","reference_image":"01_视觉资产/镜头局部参考/M01_boot_crushing_hand_contact_ref.png","h3_slot":"<Picture 2>","physical_state":"continuous_immovable_downward_pressure","bans":["no_rebounding","no_foot_lifting"],"status":"locked"}
 ~~~
 
-## 11. QC 对照顺序（终验硬门）
+## 11. scene_spatial_sandbox（导演三维空间沙盘与常驻地标合同）★
 
-1. **核对声线与不可变台词**：主角发声是否正确映射 `<Audio N>`，台词是否 100% 逐字对应剧本且配乐严格为 `SILENT`。
-2. **核对 15 秒动作预算**：铺垫≤2s，冲突2~4s，核心对白4~12s，尾态锁定12~15s，无动作被挤压在片尾。
-3. **核对物理接触与 Cxx/Sxx/Pxx**：凡涉肢体对抗者是否绑定接触参考图（`contact_interaction_sheet`）。
-4. **核对光源方向、色温与暗部目的**：再核对镜头和 180° 轴线。
-5. **对动作逐拍核对**：发力、路径、接触/落空和反应，包含 Anti-Bounce 刚体约束。
-6. **核对尾帧交接与音频过渡**：取上一段 `-0.35s` 稳定无黑场关键帧作为下一镜入口；多段拼接施加 `-af acrossfade=d=0.2` 平滑底噪。
+~~~json
+{"sandbox_id":"SSB_E01S01","scene_id":"S01","name":"第九维修区泥泞工坊","world_origin":"mud_puddle_center","cardinal_anchors":{"north_far":"30米重型破阵者战争机甲（带龙首钢质头冠）","south_camera":"摄影机安全活动区与高杆琥珀色四眼探照灯阵列","west_mid":"高压蒸汽管道与工业锅炉","east_mid":"维修区重型铸铁大门"},"dual_anchor_slots":{"slot_0_motion_gate":"上一段-0.35s尾帧","slot_1_spatial_master":"01_视觉资产/场景/Scene_01_Landmark_Breaker_Mecha_Dragon_Crest.png","status":"permanent_locked"},"continuity_rule":"出画不等于消失；视锥体重新张开时背景地标必须100%重入画"}
+~~~
+
+## 12. QC 对照顺序（终验硬门）
+
+1. **核对三维沙盘与常驻地标**：本段是否存在中远景或仰摇运镜？`Slot 1` 是否常驻挂载场景 Establishing 全景底板（`scene_spatial_sandbox`），背景地标是否在不同镜头间 100% 保持空间连续。
+2. **核对声线与不可变台词**：主角发声是否正确映射 `<Audio N>`，台词是否 100% 逐字对应剧本且配乐严格为 `SILENT`。
+3. **核对 15 秒动作预算**：铺垫≤2s，冲突2~4s，核心对白4~12s，尾态锁定12~15s，无动作被挤压在片尾。
+4. **核对物理接触与 Cxx/Sxx/Pxx**：凡涉肢体对抗者是否绑定接触参考图（`contact_interaction_sheet`）。
+5. **核对光源方向、色温与暗部目的**：再核对镜头和 180° 轴线。
+6. **对动作逐拍核对**：发力、路径、接触/落空和反应，包含 Anti-Bounce 刚体约束与解剖学双足死锁（严格 2 腿 2 臂）。
+7. **核对尾帧交接与音频过渡**：取上一段 `-0.35s` 稳定无黑场关键帧作为下一镜入口；多段拼接施加 `-af acrossfade=d=0.2` 平滑底噪。
+
 
